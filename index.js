@@ -24,7 +24,7 @@ function apply() {
 
 jQuery(async () => {
     try {
-        const html = await $.get(`${folder}/setting.html?v=1.0.1`);
+        const html = await $.get(`${folder}/setting.html?v=1.0.2`);
         $("#extensions_settings2").append(html);
     } catch (e) {
         console.warn("[sendbar-mover] setting.html error", e);
