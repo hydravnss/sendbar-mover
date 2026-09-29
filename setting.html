@@ -1,0 +1,20 @@
+<div id="sbm_settings">
+  <div class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+      <b>Sendbar Mover</b>
+      <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+    <div class="inline-drawer-content">
+      <label class="checkbox_label">
+        <input type="checkbox" id="sbm_enabled">
+        <span>Activé</span>
+      </label>
+      <div>Haut ⟷ Bas <span id="sbm_val">0</span> px</div>
+      <div class="sbm-row">
+        <input type="range" id="sbm_y" min="-600" max="300" step="1">
+        <button type="button" id="sbm_reset" class="menu_button" title="Réinitialiser">↺</button>
+      </div>
+      <small class="opacity50">Valeur négative = monte la barre de saisie, positive = la descend.</small>
+    </div>
+  </div>
+</div>
