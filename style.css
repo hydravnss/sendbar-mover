@@ -1,5 +1,11 @@
-#form_sheld #send_form {
-    transform: translateY(var(--sbm-y, 0px));
+#form_sheld {
+    position: relative !important;
+    transform: translateY(var(--sbm-y, 0px)) !important;
+    z-index: 3000;
+}
+#form_sheld #send_form,
+#form_sheld #nonQRFormItems {
+    transform: none !important;
 }
 #sbm_settings .sbm-row { display:flex; align-items:center; gap:8px; margin: 6px 0; }
 #sbm_settings input[type=range] { flex:1; }

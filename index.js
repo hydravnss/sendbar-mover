@@ -14,13 +14,17 @@ function s() {
 
 function apply() {
     const st = s();
-    document.documentElement.style.setProperty("--sbm-y", st.enabled ? `${Number(st.y) || 0}px` : "0px");
+    const v = st.enabled ? `${Number(st.y) || 0}px` : "0px";
+    document.documentElement.style.setProperty("--sbm-y", v);
+    document.body.style.setProperty("--sbm-y", v);
+    const f = document.getElementById("form_sheld");
+    if (f) f.style.setProperty("--sbm-y", v);
     $("#sbm_val").text(Number(st.y) || 0);
 }
 
 jQuery(async () => {
     try {
-        const html = await $.get(`${folder}/setting.html?v=1.0.0`);
+        const html = await $.get(`${folder}/setting.html?v=1.0.1`);
         $("#extensions_settings2").append(html);
     } catch (e) {
         console.warn("[sendbar-mover] setting.html error", e);
